@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<!--    注解配置-->
+    <context:annotation-config/>
+    指定要扫描的包，该包下的注解就会生效
+    <context:component-scan base-package="com.ddh"/>
+    <bean class="com.ddh.pojo.Dog" id="dog"/>
+    <bean class="com.ddh.pojo.Cat" id="cat"/>
+    <!--
+      byName：会自动在容器上下人进行查找和自己对应set 方法后面对应的值对应的bean id,找不到则报错
+      byType：会自动在容器上下人进行查找和自己对象属性相同的bean id　（不设置id 照样能使用）
+    -->
+    <bean id="people" class="com.ddh.pojo.People"/>
+
+</beans>
+
+<!--    <bean class="com.ddh.pojo.Dog" id="dog"/>-->
+<!--    <bean class="com.ddh.pojo.Cat" id="cat"/>-->
+<!--    &lt;!&ndash;-->
+<!--      byName：会自动在容器上下人进行查找和自己对应set 方法后面对应的值对应的bean id,找不到则报错-->
+<!--      byType：会自动在容器上下人进行查找和自己对象属性相同的bean id　（不设置id 照样能使用）-->
+<!--    &ndash;&gt;-->
+<!--    <bean id="people" class="com.ddh.pojo.People" autowire="byName">-->
+<!--        <property name="name" value="ddh"/>-->
+<!--        <property name="cat" ref="cat" />-->
+<!--        <property name="dog" ref="dog"/>-->
+<!--    </bean>-->
+<!--</beans>-->

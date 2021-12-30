@@ -11,13 +11,14 @@
     <modules>
         <module>spring-study</module>
         <module>spring-annotation</module>
+        <module>spring-aop</module>
     </modules>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>5.3.8</version>
+            <version>5.2.5.RELEASE</version>
         </dependency>
     </dependencies>
 

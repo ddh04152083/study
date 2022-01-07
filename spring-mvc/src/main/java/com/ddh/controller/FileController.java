@@ -5,9 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
-import sun.nio.cs.StandardCharsets;
 
-import javax.net.ssl.StandardConstants;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -79,7 +77,7 @@ public class FileController {
          File file = new File(realPath, fileName);
         FileInputStream is = new FileInputStream(file);
         ServletOutputStream os = response.getOutputStream();
-        int len = 0;
+        int len;
         byte[] buffer= new byte[1024];
         while ((len = is.read(buffer))!=-1){
             os.write(buffer, 0, len);

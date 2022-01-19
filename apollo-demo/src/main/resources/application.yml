@@ -1,0 +1,30 @@
+server:
+  port: 8080
+app:
+  id: apollo-app
+apollo:
+  meta: http://localhost:8000
+  bootstrap:
+    enabled: true
+    namespaces: common,application
+    eagerLoad:
+      enabled: true
+
+logging:
+  level:
+    com:
+      ddh:
+        apollo:
+          controller: debug
+
+
+
+
+
+
+
+
+
+
+name:
+    address:11

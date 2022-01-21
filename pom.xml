@@ -16,6 +16,7 @@
         <module>spring-mvc</module>
         <module>java-se</module>
         <module>apollo-demo</module>
+        <module>com.ddh.swagger</module>
     </modules>
 
     <dependencies>
